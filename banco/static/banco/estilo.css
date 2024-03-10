@@ -1,0 +1,121 @@
+/* estilo.css */
+
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #fde6e6; /* Rosa pastel suave */
+    background-image: linear-gradient(to right, rgba(139, 69, 19, 0.1), rgba(139, 69, 19, 0.1)); /* Detalles decorativos de marrón suave */
+    background-size: 20px 20px; /* Tamaño de los detalles */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+button {
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde fino */
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Sombra para efecto 3D */
+}
+
+input[type="text"]:focus,
+button:focus {
+    border-color: #4caf50; /* Cambia el color del borde al enfocar */
+}
+
+button {
+    background-color: #4caf50; /* Color de botón Material Design */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Color de botón hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a.delete-button,
+a.modify-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f44336; /* Color de botón eliminar */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+a.modify-button {
+    background-color: #ff9800; /* Color de botón modificar */
+}
+
+a.delete-button:hover,
+a.modify-button:hover {
+    background-color: #d32f2f; /* Color de botón eliminar hover */
+}
+
+a.modify-button:hover {
+    background-color: #e68a00; /* Color de botón modificar hover */
+}
+
+/* Estilos para el formulario de modificar cliente */
+.modificar-form {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra */
+}
+
+/* Estilos para la funcionalidad de conversión de moneda */
+.conversion-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra */
+}
+
+.conversion-container h2,
+.conversion-container h4 {
+    margin-bottom: 10px;
+}
+
+.conversion-container input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde fino */
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Sombra para efecto 3D */
+}
+
+.conversion-container input[type="number"]:focus {
+    border-color: #4caf50; /* Cambia el color del borde al enfocar */
+}
+
+.conversion-container p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+

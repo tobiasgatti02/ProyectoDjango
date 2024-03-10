@@ -1,0 +1,47 @@
+/* modificar_cliente.css */
+
+/* Estilos generales */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #fde6e6; /* Rosa pastel suave */
+    background-image: linear-gradient(to right, rgba(139, 69, 19, 0.1), rgba(139, 69, 19, 0.1)); /* Detalles decorativos de marrón suave */
+    background-size: 20px 20px; /* Tamaño de los detalles */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+button {
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde fino */
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Sombra para efecto 3D */
+}
+
+input[type="text"]:focus,
+button:focus {
+    border-color: #4caf50; /* Cambia el color del borde al enfocar */
+}
+
+button {
+    background-color: #4caf50; /* Color de botón Material Design */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Color de botón hover */
+}
+
