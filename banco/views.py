@@ -3,6 +3,9 @@ from .models import Cliente
 from .forms import ClienteForm
 from django.http import HttpResponse
 import requests
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
+
 
 def index(request):
     precio_dolar = obtener_precio_dolar()
@@ -16,7 +19,7 @@ def index(request):
     return render(request, "banco/index.html", {
         "clientes": Cliente.objects.all(),
         "form": form,
-        "precio_dolar": precio_dolar[0]
+        "precio_dolar": precio_dolar[1]
     })
 
 def eliminar_cliente(request, cliente_id):
@@ -40,7 +43,7 @@ def modificar_cliente(request, cliente_id):
 def obtener_precio_dolar():
     response = requests.get('https://dolarapi.com/v1/dolares/blue')
     data = response.json()
-    print(data)  # Imprime la respuesta de la API
+
     if 'compra' in data and 'venta' in data:
         return data['compra'], data['venta']
     else:
@@ -75,3 +78,26 @@ def transferir_dinero(request):
         destino.save()
 
     return redirect('index')
+
+
+
+
+def login_view(request):
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+
+        # Autenticar al usuario
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            # Si las credenciales son válidas, iniciar sesión
+            login(request, user)
+            return redirect('index')  # Redirigir a la página principal
+        else:
+            # Si las credenciales no son válidas, mostrar un mensaje de error
+            error_message = "Credenciales inválidas. Por favor, inténtalo de nuevo."
+            return render(request, "login.html", {"error_message": error_message})
+    else:
+        # Si la solicitud no es de tipo POST, renderizar el formulario de inicio de sesión
+        return render(request, "login.html")

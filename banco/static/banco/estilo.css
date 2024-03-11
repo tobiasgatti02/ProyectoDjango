@@ -119,3 +119,43 @@ a.modify-button:hover {
 
 
 
+.transfer-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra */
+}
+
+.transfer-container h2 {
+    margin-bottom: 10px;
+}
+
+.transfer-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.transfer-container input[type="number"],
+.transfer-container button {
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde fino */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Sombra para efecto 3D */
+}
+
+.transfer-container input[type="number"]:focus,
+.transfer-container button:focus {
+    border-color: #4caf50; /* Cambia el color del borde al enfocar */
+}
+
+.transfer-container button {
+    background-color: #4caf50; /* Color de botón Material Design */
+    color: white;
+    cursor: pointer;
+}
+
+.transfer-container button:hover {
+    background-color: #45a049; /* Color de botón hover */
+}
